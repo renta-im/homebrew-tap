@@ -5,8 +5,13 @@ Homebrew formulae for [Renta](https://renta.im) command-line tools.
 ## Install
 
 ```shell
+brew trust renta-im/tap
 brew install renta-im/tap/renta
 ```
+
+Homebrew 6 refuses to load a formula from a tap it has not been told to trust,
+so the first line is not optional — without it the install stops with
+`Refusing to load formula from untrusted tap`. It is asked once per machine.
 
 Upgrade with `brew upgrade renta`, remove with `brew uninstall renta`.
 
