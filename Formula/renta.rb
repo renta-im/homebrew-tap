@@ -5,13 +5,13 @@
 class Renta < Formula
   desc "Manage Renta ETL connections, pipelines and runs from the terminal"
   homepage "https://renta.im"
-  version "0.1.0"
+  version "0.2.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/renta-im/homebrew-tap/releases/download/v0.1.0/renta_0.1.0_darwin_amd64.tar.gz"
-      sha256 "6e3bf454c5c5e456b2cdcf27586de760c9f48abf2b0cc692dbb1fcff8cb4f555"
+      url "https://github.com/renta-im/homebrew-tap/releases/download/v0.2.0/renta_0.2.0_darwin_amd64.tar.gz"
+      sha256 "d78976940a136ca880b99acd5639eb09b40b69a4586efd4b389ef450fba45448"
 
       define_method(:install) do
         bin.install "renta"
@@ -21,8 +21,8 @@ class Renta < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/renta-im/homebrew-tap/releases/download/v0.1.0/renta_0.1.0_darwin_arm64.tar.gz"
-      sha256 "dba2404ca8549ebd1daf0f9884b8e929a3372b89767290aeb5e289dca67a0496"
+      url "https://github.com/renta-im/homebrew-tap/releases/download/v0.2.0/renta_0.2.0_darwin_arm64.tar.gz"
+      sha256 "a1ae83a9110561691c5facfa6e5613546635d35bcc01727f186d071921d66c98"
 
       define_method(:install) do
         bin.install "renta"
@@ -35,8 +35,8 @@ class Renta < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/renta-im/homebrew-tap/releases/download/v0.1.0/renta_0.1.0_linux_amd64.tar.gz"
-      sha256 "5d9da1b5a0ef7df2536df407e77b2415bfb38e8ea713095164090d93689a7469"
+      url "https://github.com/renta-im/homebrew-tap/releases/download/v0.2.0/renta_0.2.0_linux_amd64.tar.gz"
+      sha256 "f28ec93e5dbbed6b06a02436ab47ef88f7ff1c381b7d846d33e5d0bb10e514d7"
       define_method(:install) do
         bin.install "renta"
         generate_completions_from_executable(bin/"renta", "completion")
@@ -45,8 +45,8 @@ class Renta < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/renta-im/homebrew-tap/releases/download/v0.1.0/renta_0.1.0_linux_arm64.tar.gz"
-      sha256 "481cb5c84bccb7abf2605a97539ad683164ac272d5f33ba075cabf88b71325cd"
+      url "https://github.com/renta-im/homebrew-tap/releases/download/v0.2.0/renta_0.2.0_linux_arm64.tar.gz"
+      sha256 "874f4078d1493e88f5e92f64aff17baf7cb5ce4a96b7d48a0d33c88cc3bf7ffa"
       define_method(:install) do
         bin.install "renta"
         generate_completions_from_executable(bin/"renta", "completion")
